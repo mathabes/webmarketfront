@@ -1,15 +1,11 @@
-import React from 'react';
-import Navbar from './Componentes/NavBar';
-import AnunciosPromocoes from './Componentes/AnunciosPromocoes';
+import AnunciosPromocoes from './Components/AnunciosPromocoes';
+import { NavBar } from './Components/NavBar';
 
-const Home = () => {
-  return (
-    <div>
-      <Navbar />
+export default function Home() {
+  return ( 
+    <main className="flex min-h-screen flex-col items-center">
+      <NavBar active="dashboard" />
       <AnunciosPromocoes />
-      <h1>Home Page</h1>
-    </div>
+    </main>
   );
-};
-
-export default Home;
+}
