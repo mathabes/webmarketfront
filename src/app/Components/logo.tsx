@@ -6,7 +6,6 @@ const Logo: React.FC = () => {
       {/* Usando Link do Next.js para redirecionar para a página principal */}
       <Link href="/">
           <img src="/logo.png" alt="Logo" style={{ width: '100px' }} />
-
       </Link>
     </div>
   );
