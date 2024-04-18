@@ -7,7 +7,7 @@ export function NavBar({ active }: { active: "dashboard" | "Cadastro" | "Login" 
         <nav className="flex justify-between items-center px-8 py-4 bg-white border-gray-200 border-solid border shadow-md w-full">
             <ul>
                 <li className={` ${active === "dashboard" ? ' ' : ''}`}>
-                    <Link href="/"><Logo widthLogo="25%" /></Link>
+                    <Link href="/"><Logo /></Link>
                 </li>
             </ul>
             <ul className="flex gap-6">

@@ -1,15 +1,13 @@
 import Link from 'next/link';
 
-interface LogoWidthProps {
-  widthLogo: string;
-}
 
-const Logo: React.FC<LogoWidthProps> = ({widthLogo}) => {
+
+const Logo = () => {
   return (
-    <div className="logo">
+    <div className="logo ml-auto">
       {/* Usando Link do Next.js para redirecionar para a página principal */}
       <Link href="/">
-          <img src="/logo.png" alt="Logo" style={{ width: widthLogo }} />
+          <img className="size-36" src="/logo.png" alt="Logo" />
       </Link>
     </div>
   );
