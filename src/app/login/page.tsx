@@ -1,4 +1,4 @@
-import Logo from '../Components/logo';
+import Logo from '../../Components/logo';
 
 export default function Movimentacoes() {
     return ( 

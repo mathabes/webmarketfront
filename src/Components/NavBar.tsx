@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Logo from '../Components/logo';
+import Logo from './logo';
+import { Search, ShoppingCart } from "lucide-react";
 
 export function NavBar({ active }: { active: "dashboard" | "Cadastro" | "Login" | "VendaProduto" | "Carrinho"}) {
     return (
@@ -9,18 +10,19 @@ export function NavBar({ active }: { active: "dashboard" | "Cadastro" | "Login" 
                     <Link href="/"><Logo /></Link>
                 </li>
             </ul>
-            
             <ul className="flex gap-6">
-
-                <li>
-                    <input type="text" placeholder="Pesquisar..." className="px-2 py-1 bg-gray-200 border border-gray-300" />
-                </li>
+            <li className="relative flex items-center justify-center">
+                <input type="text" placeholder="Pesquisar..." className="px-2 py-1 bg-gray-200 border border-gray-300 pr-8" />
+                <span className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                    <Search />
+                </span>
+            </li>
                 <li className={`${active === "VendaProduto" ? 'border-b-4  pb-3' : ''} text-orange-500 px-4 py-2 rounded`}>
                     <Link href="/vendaProduto">Venda seu Produto</Link>
                 </li>
                 <li>
                     <Link href="/carrinho">
-                        <img  src="/carrinho.png" alt="Carrinho de Compras" className="h-6 w-6 bg-orange-500 rounded-full p-1"/>
+                        <ShoppingCart className="h-6 w-6 bg-orange-500 rounded-full p-1" />
                     </Link>
                 </li>
             </ul>

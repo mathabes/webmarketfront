@@ -1,5 +1,5 @@
-import AnunciosPromocoes from './Components/AnunciosPromocoes';
-import { NavBar } from './Components/NavBar';
+import AnunciosPromocoes from '../Components/AnunciosPromocoes';
+import { NavBar } from '../Components/NavBar';
 
 export default function Home() {
   return ( 
