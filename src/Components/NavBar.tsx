@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Logo from './logo';
-import { Search, ShoppingCart } from "lucide-react";
+import { Search, ShoppingCart } from 'lucide-react';
 
 export function NavBar({ active }: { active: "dashboard" | "Cadastro" | "Login" | "VendaProduto" | "Carrinho"}) {
     return (
-        <nav className="flex justify-between items-center px-8 py-4 mt-10 bg-white border-gray-200 border-solid border shadow-md w-full">
+        <nav className="flex justify-between items-center px-8 py-4 bg-white border-gray-200 border-solid border shadow-md w-full">
             <ul>
-                <li className={`border-b-4 pb-3 ${active === "dashboard" ? 'border-b-4  pb-3' : ''}`}>
-                    <Link href="/"><Logo /></Link>
+                <li className={` ${active === "dashboard" ? ' ' : ''}`}>
+                    <Link href="/"><Logo widthLogo="25%" /></Link>
                 </li>
             </ul>
             <ul className="flex gap-6">
