@@ -4,10 +4,11 @@ import { redirect } from "next/navigation"
 
 
 export async function create(formData: FormData){
+    await new Promise(r => setTimeout(r, 4000))
+
     const data = {
         email: formData.get("email"),
-        nome: formData.get("nome"),
-        senha: formData.get("senha")
+        nome: formData.get("nome")
     }
     
     const options = {

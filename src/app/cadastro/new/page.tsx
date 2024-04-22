@@ -1,3 +1,6 @@
+"use client"
+
+import { create } from "@/app/actions/usuario/create";
 import CampoTexto from '@/Components/CampoTexto';
 import Logo from '@/Components/logo';
 import Link from 'next/link';
@@ -11,24 +14,20 @@ export default function CadastroNovo() {
         <h2 className="text-orange-700 font-extrabold text-3xl">Registre-se</h2>
         <Logo/>
       </div>
-      <form action="">
+      <form action={create}>
         <ul>
           <li className="my-4">
-              <CampoTexto placeholderText="Email"/>
+              <CampoTexto placeholderText="email"/>
           </li>
           <li className="my-4">
-              <CampoTexto placeholderText="Nome"/>
-          </li>
-          <li className="my-4">
-              <CampoTexto placeholderText="Senha"/>
+              <CampoTexto placeholderText="nome"/>
           </li>
         </ul>
         <Link href="/">
                 <button className="bg-transparent hover:bg-orange-500 text-orange-500 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded"
                     >Cancelar</button>
         </Link>
-
-        <button className="ml-16 px-4 py-2 rounded bg-orange-500 text-white">Pronto</button>
+            <button type="submit" className="ml-16 px-4 py-2 rounded bg-orange-500 text-white">Pronto</button>
 
       </form>
     </div>
