@@ -1,3 +1,5 @@
+"use client"
+
 import AnunciosPromocoes from '../Components/AnunciosPromocoes';
 import { NavBar } from '../Components/NavBar';
 

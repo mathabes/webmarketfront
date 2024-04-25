@@ -22,6 +22,6 @@ export async function create(formData: FormData){
     const resp = await fetch("http://localhost:8080/usuario", options)
 
     if(resp.ok){
-        redirect("/")
+        redirect("/?success=true")
     }
 }
