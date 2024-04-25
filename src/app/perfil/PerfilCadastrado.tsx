@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { destroy } from "../actions/usuario/destroy";
 import toast from "react-hot-toast";
 
@@ -23,9 +24,6 @@ export function PerfilCadastrado(perfilCadastrado: Usuario) {
         }
     )
 }
-
-
-
     return (
         <div>
             <div className="flex justify-between">
@@ -41,9 +39,9 @@ export function PerfilCadastrado(perfilCadastrado: Usuario) {
                 </div>
             </div>
 
-            {/* <Link href="/cadastro/edit">
+             <Link href= {"/perfil/" + perfilCadastrado.id}>
                 <button className="bg-transparent hover:bg-orange-500 text-orange-500 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Editar Perfil</button>
-            </Link> */}
+            </Link>
 
             <button onClick={handleDelete} className="bg-transparent hover:bg-red-500 text-orange-500 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Deletar Perfil</button>
         </div>
