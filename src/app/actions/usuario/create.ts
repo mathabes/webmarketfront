@@ -1,5 +1,6 @@
 "use server"
 
+import { revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
 
 
@@ -22,6 +23,7 @@ export async function create(formData: FormData){
     const resp = await fetch("http://localhost:8080/usuario", options)
 
     if(resp.ok){
+        revalidateTag("usuario")
         redirect("/?success=true")
     }
 }

@@ -26,10 +26,10 @@ export function NavBar({ active }: { active: "dashboard" | "Cadastro" | "Login" 
     }, [])
 
     return (
-        <nav className="flex justify-between items-center px-8 py-4 bg-white border-gray-200 border-solid border shadow-md w-full">
+        <nav className="flex justify-between mt-10 items-center px-8 py-4 bg-white rounded-2xl border-gray-200 border-solid border shadow-md w-full">
             <ul>
                 <li className={` ${active === "dashboard" ? ' ' : ''}`}>
-                    <Link href="/"><Logo /></Link>
+                    <Link href="/">WebMarket</Link>
                 </li>
             </ul>
             <ul className="flex gap-6">
@@ -39,12 +39,12 @@ export function NavBar({ active }: { active: "dashboard" | "Cadastro" | "Login" 
                     <Search />
                 </span>
             </li>
-                <li className={`${active === "VendaProduto" ? 'border-b-4  pb-3' : ''} text-orange-500 px-4 py-2 rounded`}>
-                    <Link href="/vendaProduto">Venda seu Produto</Link>
-                </li>
+            <li className={`${active === "VendaProduto" ? 'border-b-4  pb-3' : ''} text-orange-500 px-4 py-2 rounded block`}>
+                <Link href="/vendaProduto">Venda seu Produto</Link>
+            </li>
                 <li>
                     <Link href="/carrinho">
-                        <ShoppingCart className="h-6 w-6 bg-orange-500 rounded-full p-1" />
+                        <ShoppingCart className="h-8 w-12 bg-orange-500 text-white rounded-3xl p-1" />
                     </Link>
                 </li>
             </ul>
